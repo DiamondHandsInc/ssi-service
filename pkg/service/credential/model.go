@@ -26,6 +26,7 @@ type CreateCredentialRequest struct {
 	Context string `json:"context,omitempty"`
 	// A schema ID is optional. If present, we'll attempt to look it up and validate the data against it.
 	SchemaID    string         `json:"schemaId,omitempty"`
+	Type        string         `json:"type,omitempty"`
 	Data        map[string]any `json:"data,omitempty"`
 	Expiry      string         `json:"expiry,omitempty"`
 	Revocable   bool           `json:"revocable,omitempty"`

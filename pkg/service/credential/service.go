@@ -227,6 +227,13 @@ func (s Service) createCredential(ctx context.Context, request CreateCredentialR
 		}
 	}
 
+	// if a type value exists, set it
+	if request.Type != "" {
+		if err := builder.AddType(request.Type); err != nil {
+			return nil, errors.Wrap(err, "adding type")
+		}
+	}
+
 	cred, err := builder.Build()
 	if err != nil {
 		return nil, sdkutil.LoggingErrorMsg(err, "could not build credential")
