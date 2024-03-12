@@ -1128,6 +1128,10 @@ definitions:
           context values.
         example: ""
         type: string
+      type:
+        description: Optional. Corresponds to `type` in https://www.w3.org/TR/vc-data-model/#types
+        example: "StudentCard"
+        type: string
       data:
         additionalProperties:
           type: string
